@@ -26,8 +26,8 @@ export async function generateImagePrompt(name: string) {
 
     console.log(data);
     
-    const image_description = data.choices[0].message.content;
-    // const image_description = "A notebook with a minimalistic flat design";
+    // const image_description = data.choices[0].message.content;
+    const image_description = "A notebook with a minimalistic flat design";
 
     return image_description as string;
 
