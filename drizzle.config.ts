@@ -9,6 +9,6 @@ export default {
   dialect: 'postgresql',
   schema: './src/lib/db/schema.ts',
   dbCredentials: {
-    url: process.env.DATABASE_URL as string,
+    url: process.env.NEXT_PUBLIC_DATABASE_URL as string,
   },
 } satisfies Config;
