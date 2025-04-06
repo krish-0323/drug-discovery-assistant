@@ -12,10 +12,11 @@ import { UserButton } from '@clerk/nextjs';
 import DeleteButton from '@/components/DeleteButton';
 import Main from '@/components/Main';
 
-interface Props {
+type Props = {
   params: {
     noteId: string;
   }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 const NotebookPage = async ({params: {noteId}}: Props) => {
