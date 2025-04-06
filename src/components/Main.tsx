@@ -22,9 +22,16 @@ interface Props {
 }
 
 const Main = ({ note }: Props) => {
+  type ChatType = {
+    id: number;
+    userId: string;
+    noteBookId: string;
+    question: string;
+    answer: string;
+  };
   const { user } = useUser();
   const [prompt, setPrompt] = useState("");
-  const [chats, setChats] = useState<any[]>([]);
+  const [chats, setChats] = useState<ChatType[]>([]);
 
   const HtmlRenderer = ({ htmlString }: { htmlString: string }) => {
     return (
@@ -35,7 +42,7 @@ const Main = ({ note }: Props) => {
   const helper =
     " Please give the question asked by user and the answer in the json format, give question and answer as a field in the json. Write the answer in the html format wrap in div tag";
 
-  const generateResult = async (result: any) => {
+  const generateResult = async (result: { response: { text: () => string } }) => {
     const mockJSONResult = result.response
       .text()
       .replace("```json", "")
