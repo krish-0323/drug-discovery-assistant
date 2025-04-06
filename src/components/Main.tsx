@@ -188,8 +188,12 @@ const Main = ({ note }: Props) => {
             </div>
             <div className="flex gap-4">
               <div className="flex gap-4">
-                {/* <ImagesIcon className="w-6 cursor-pointer" />
-                <MicIcon className="w-6 cursor-pointer" /> */}
+                <Button type="button">
+                  <ImagesIcon className="w-6 cursor-pointer" />
+                </Button>
+                <Button type="button">
+                  <MicIcon className="w-6 cursor-pointer" />
+                </Button>
                 <Button type="button" onClick={sendPrompt}>
                   <SendIcon className="w-6 cursor-pointer" />
                 </Button>
