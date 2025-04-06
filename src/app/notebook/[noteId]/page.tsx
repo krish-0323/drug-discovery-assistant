@@ -13,13 +13,10 @@ import DeleteButton from '@/components/DeleteButton';
 import Main from '@/components/Main';
 
 type Props = {
-  params: {
-    noteId: string;
-  }
-  searchParams: { [key: string]: string | string[] | undefined }
+  noteId: string;
 }
 
-const NotebookPage = async ({params: {noteId}}: Props) => {
+const NotebookPage = async (noteId: Props) => {
   const {userId} = await auth();
   const user = await clerk.users.getUser(userId as string);
   
@@ -30,7 +27,7 @@ const NotebookPage = async ({params: {noteId}}: Props) => {
   const notes = await db
   .select()
   .from($research)
-  .where(and(eq($research.id, parseInt(noteId)), eq($research.userId, userId)));
+  .where(and(eq($research.id, parseInt(noteId.noteId)), eq($research.userId, userId)));
   
   if(notes.length !== 1){
     return redirect('/dashboard');
