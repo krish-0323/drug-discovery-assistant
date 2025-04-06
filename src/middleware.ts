@@ -1,13 +1,5 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-import { NextResponse } from "next/server";
 
-const isPublicRoute = createRouteMatcher([
-  '/sign-in',
-  '/sign-up',
-])
-export default clerkMiddleware((auth, request, event) => {
-  
-})
 export const config = {
   matcher: [
     // Skip Next.js internals and all static files, unless found in search params
