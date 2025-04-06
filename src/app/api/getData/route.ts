@@ -21,7 +21,7 @@ export async function GET(req: Request) {
 
     console.log("data", data);
     return NextResponse.json({ data: data, noteId: noteId, userId: userId });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Database fetch failed" }, { status: 500 });
   }
 }
