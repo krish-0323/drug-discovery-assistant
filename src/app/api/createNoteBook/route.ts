@@ -1,6 +1,5 @@
 import { db } from "@/lib/db";
 import { $research } from "@/lib/db/schema";
-import { generateImage, generateImagePrompt } from "@/lib/openai";
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
@@ -17,19 +16,8 @@ export async function POST(req: Request){
   const body = await req.json();
   const {name} = body;
 
-  let image_description = await generateImagePrompt(name);
-  console.log({image_description});
-  
-  if(image_description === null){
-    image_description = 'A notebook with a minimalistic flat design';
-  }
-
-  const image_url = await generateImage(image_description);
-  if(!image_url){
-    return new NextResponse('Failed to generate image', 
-      {status: 500}
-    );
-  }
+  // const image_description = 'A notebook with a minimalistic flat design';
+  const image_url = "thumbnail.webp"
 
   const note_ids = await db
   .insert($research)
