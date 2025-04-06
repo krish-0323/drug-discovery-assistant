@@ -26,7 +26,7 @@ const DeleteButton = (props: Props) => {
         const confirm = window.confirm('Are you sure you want to delete this notebook?');
         if(!confirm) return;
         deleteNote.mutate(undefined, {
-          onSuccess: (data) => {
+          onSuccess: () => {
             router.push('/dashboard')
           },
           onError: (error) => {

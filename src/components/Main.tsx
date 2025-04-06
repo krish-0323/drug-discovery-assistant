@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ResearchType } from "@/lib/db/schema";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -10,7 +10,6 @@ import {
   MicIcon,
   SendIcon,
   UserIcon,
-  BotIcon,
 } from "lucide-react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -18,8 +17,6 @@ import { chatSession } from "@/lib/gemini";
 import { db } from "@/lib/db";
 import { useUser } from "@clerk/nextjs";
 import { $chat } from "@/lib/db/schema";
-import { redirect } from "next/navigation";
-import { eq, and } from "drizzle-orm";
 interface Props {
   note: ResearchType;
 }

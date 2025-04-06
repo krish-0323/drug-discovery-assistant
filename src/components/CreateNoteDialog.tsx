@@ -12,7 +12,7 @@ interface Props {
   
 }
 
-const CreateNoteDialog = (props: Props) => {
+const CreateNoteDialog = () => {
   const router = useRouter();
   const [input, setInput] = useState('');
   const createNoteBook = useMutation({
