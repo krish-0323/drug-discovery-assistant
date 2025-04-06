@@ -16,12 +16,9 @@ interface PageProps {
   params: {
     noteId: string
   };
-  searchParams: {
-    [key: string]: string | string[] | undefined
-  };
 }
 
-const NotebookPage = async ({ params, searchParams }: PageProps) => {
+const NotebookPage = async ({ params }: PageProps) => {
   const {userId} = await auth();
   const user = await clerk.users.getUser(userId as string);
   
