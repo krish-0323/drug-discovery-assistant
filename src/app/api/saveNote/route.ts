@@ -18,9 +18,6 @@ export async function POST(req: Request){
     if(notes.length !== 1) {
       return new NextResponse("Note not found", {status: 404});
     }
-    
-    const note = notes[0]
-    
 
     return NextResponse.json({success: true}, {status: 200});
   } catch (error) {

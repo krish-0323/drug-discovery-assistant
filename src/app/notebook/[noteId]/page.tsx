@@ -9,9 +9,7 @@ import { clerk } from "@/lib/clerk-server";
 import { redirect } from 'next/navigation';
 import React from 'react'
 import { UserButton } from '@clerk/nextjs';
-import TipTapEditor from '@/components/TipTapEditor';
 import DeleteButton from '@/components/DeleteButton';
-import Sidebar from '@/components/Sidebar';
 import Main from '@/components/Main';
 
 interface Props {

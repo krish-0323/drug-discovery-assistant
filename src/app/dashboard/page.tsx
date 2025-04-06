@@ -10,10 +10,14 @@ import { db } from "@/lib/db";
 import { $research } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
+import Image from "next/image";
 
-interface Props {}
+interface Props {
+  
+}
 
-const DashboardPage = async (props: Props) => {
+
+const DashboardPage = async () => {
   
   const userId = await auth();
   if(!userId.userId) {
@@ -58,7 +62,7 @@ const DashboardPage = async (props: Props) => {
               return (
                 <a href={`/notebook/${note.id}`} key={note.id}>
                   <div className=" border border-stone-400 overflow-hidden rounded-lg flex flex-col hover:shadow-xl transition hover:-translate-y-1">
-                    <img
+                    <Image
                     width={400}
                     height={600}
                     alt={note.name}
