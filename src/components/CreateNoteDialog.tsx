@@ -8,10 +8,6 @@ import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
-interface Props {
-  
-}
-
 const CreateNoteDialog = () => {
   const router = useRouter();
   const [input, setInput] = useState('');

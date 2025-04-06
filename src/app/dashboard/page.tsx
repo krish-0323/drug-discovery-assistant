@@ -12,10 +12,6 @@ import { eq } from "drizzle-orm";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 
-interface Props {
-  
-}
-
 
 const DashboardPage = async () => {
   
