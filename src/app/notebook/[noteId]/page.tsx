@@ -12,11 +12,16 @@ import { UserButton } from '@clerk/nextjs';
 import DeleteButton from '@/components/DeleteButton';
 import Main from '@/components/Main';
 
-type Props = {
-  noteId: string;
+interface PageProps {
+  params: {
+    noteId: string
+  };
+  searchParams: {
+    [key: string]: string | string[] | undefined
+  };
 }
 
-const NotebookPage = async (noteId: Props) => {
+const NotebookPage = async ({ params, searchParams }: PageProps) => {
   const {userId} = await auth();
   const user = await clerk.users.getUser(userId as string);
   
@@ -27,7 +32,7 @@ const NotebookPage = async (noteId: Props) => {
   const notes = await db
   .select()
   .from($research)
-  .where(and(eq($research.id, parseInt(noteId.noteId)), eq($research.userId, userId)));
+  .where(and(eq($research.id, parseInt(params.noteId)), eq($research.userId, userId)));
   
   if(notes.length !== 1){
     return redirect('/dashboard');
