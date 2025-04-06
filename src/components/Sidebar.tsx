@@ -1,13 +1,8 @@
 "use client"
 import React from 'react'
 import {FileQuestionIcon, HistoryIcon, MenuIcon, MessageSquare, SettingsIcon} from 'lucide-react'
-import { ResearchType } from '@/lib/db/schema'
 
-interface Props {
-  note: ResearchType
-}
-
-const Sidebar = ({note}: Props) => {
+const Sidebar = () => {
   const [extended, setExtended] = React.useState(true);
   return (
     <>

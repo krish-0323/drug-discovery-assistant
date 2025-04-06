@@ -2,9 +2,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-type Props = {};
-
-const TypewriterTitle = (props: Props) => {
+const TypewriterTitle = () => {
   return (
     <Typewriter
       options={{
