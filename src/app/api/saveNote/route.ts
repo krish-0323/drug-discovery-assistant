@@ -6,9 +6,9 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request){
   try {
     const body = await req.json();
-    let {noteId, editorState} = body;
+    let {noteId} = body;
 
-    if(!editorState || !noteId) {
+    if(!noteId) {
       return new Response("Missing editorState or noteId", {status: 400});
     }
 
@@ -20,9 +20,7 @@ export async function POST(req: Request){
     }
     
     const note = notes[0]
-    if(note.editorState !== editorState){
-      await db.update($research).set({editorState}).where(eq($research.id, noteId));
-    }
+    
 
     return NextResponse.json({success: true}, {status: 200});
   } catch (error) {
