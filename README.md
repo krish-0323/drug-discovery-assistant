@@ -14,23 +14,24 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Secure Authentication  
+- Seamless Login using Google or GitHub accounts  
+- Ensures user security, privacy, and personalized workspace  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Smart Research Notebooks  
+- Create and manage disease-specific notebooks  
+- User-friendly UI for organizing research data and AI-generated content  
 
-## Learn More
+### 3. Powered by Gemini API  
+- Integration with Google's Gemini API for advanced data generation and query answering  
+- Provides accurate, context-aware responses to user queries  
 
-To learn more about Next.js, take a look at the following resources:
+### 4. File Upload & Data Extraction  
+- Upload research papers, PDFs, and other files  
+- Automatically extract and summarize key data from uploaded documents  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 5. Voice Input Feature  
+- Speech-to-Text support for quick and effortless interaction  
+- Helps users to input queries or notes through voice commands  
