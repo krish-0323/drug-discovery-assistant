@@ -2,9 +2,29 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up the project locally:
+
+### 1. Install Dependencies
 
 ```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key_here
+CLERK_SECRET_KEY=your_key_here
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=your_url_here
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=your_url_here
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=your_url_here
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=your_url_here
+DATABASE_URL=your_database_url_here
+GEMINI_API_KEY=your_gemini_api_key_here
+
+
 npm run dev
 # or
 yarn dev
@@ -12,7 +32,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+
 
 ## Features  
 
