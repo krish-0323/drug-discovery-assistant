@@ -14,7 +14,11 @@ yarn install
 pnpm install
 # or
 bun install
+```
 
+### 2. Set up environment variables
+
+```bash
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_key_here
 CLERK_SECRET_KEY=your_key_here
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=your_url_here
@@ -23,8 +27,11 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=your_url_here
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=your_url_here
 DATABASE_URL=your_database_url_here
 GEMINI_API_KEY=your_gemini_api_key_here
+```
 
+### 3. Run the development server
 
+```bash
 npm run dev
 # or
 yarn dev
@@ -32,7 +39,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-
+```
 
 ## Features  
 
